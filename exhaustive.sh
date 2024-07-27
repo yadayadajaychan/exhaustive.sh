@@ -65,10 +65,12 @@ do
 	done
 	echo \#10\;
 
+	#echo ${VAL[*]}
+
 	VAL[$n]=$((${VAL[$n]} + 1))
 	for i in $(seq $n -1 0)
 	do
-		if [ ${VAL[$i]} -lt ${MAX[$n]} ]
+		if [ ${VAL[$i]} -lt ${MAX[$i]} ]
 		then
 			break
 		fi
